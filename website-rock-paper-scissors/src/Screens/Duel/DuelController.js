@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PointsContext } from '../../Database/PointsContext';
+import { PointsContext } from '../../Global/PointsContext';
 import DualView from '../Duel/DuelView';
 
 const DuelController = () => {
@@ -7,7 +7,7 @@ const DuelController = () => {
     const context = useContext(PointsContext);
 
     const buttonPlayAgain = () => {
-        window.location.href="http://belluzzo-rock-paper-scissors-peach.vercel.app"
+        window.location.href="http://localhost:3000"
     }
 
     const buttonDev = () => {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createContext } from 'react';
 
 export const PointsContext = createContext({
-    points: 20,
+    points: 0,
     onChangePoints: () => {},
 });
 

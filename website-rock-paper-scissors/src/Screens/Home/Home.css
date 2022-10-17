@@ -50,11 +50,13 @@
 
     gap: 0.5rem;
 
+    margin-top: 15px;
+
 }
 
 .buttonPlaying{
-    width: 150px;
-    height: 50.06px;
+    width: 144px;
+    height: 45.06px;
 
     background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
@@ -64,7 +66,7 @@
 
     font-family: 'Barlow Semi Condensed';
     font-weight: 700;
-    font-size: 42px;
+    font-size: 34px;
 
     color: #565468;
 

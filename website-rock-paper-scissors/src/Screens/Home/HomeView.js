@@ -8,7 +8,7 @@ import play3 from '../../Images/play3.png'
 
 
 export default function HomeView ( {buttonDev, points, buttonPaper,
-    buttonScissors,buttonPlaying1, buttonPlaying2} ){
+    buttonScissors, buttonRock, buttonPlaying1, buttonPlaying2} ){
 
     return (
         <div className='home'>
@@ -26,6 +26,7 @@ export default function HomeView ( {buttonDev, points, buttonPaper,
         <div className='playings'>     
         <button className='buttonPlaying' onClick={buttonPlaying1}>1P</button>
         <button className='buttonPlaying' onClick={buttonPlaying2}>2P</button>
+        <button className='buttonPlaying' onClick={buttonDev}>2P I.A</button>
         </div>   
 
         </div>
@@ -37,7 +38,7 @@ export default function HomeView ( {buttonDev, points, buttonPaper,
         </div>
 
         <div className='plays2'>
-            <input type="image" src={play3} onClick={buttonDev}/>
+            <input type="image" src={play3} onClick={buttonRock}/>
         </div>
 
         <div id='triangle'>
