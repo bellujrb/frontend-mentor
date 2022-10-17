@@ -11,7 +11,7 @@ const HomeController = () => {
 
     useEffect(() => {
         if (player1 && (player2 === "Scissors" || player2 === "Paper")){
-            window.location.href="http://localhost:3000/duel"
+            window.location.href="belluzzo-rock-paper-scissors-peach.vercel.app/duel"
         }
     }, [player1, player2])
 
