@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-block: 1em;
+
+    background: white;
+}
+
+header nav ul {
+    display: flex;
+    gap: 0.5em;
+}
+
+header nav ul a {
+    padding: 0.5em;
+
+    font-weight: 400;
+    color: #9597a5;
+}
+
+header nav ul a:hover {
+    color: black;
+    transform: scale(1.15);
+}
