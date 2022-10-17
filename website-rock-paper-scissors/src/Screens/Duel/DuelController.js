@@ -7,7 +7,7 @@ const DuelController = () => {
     const context = useContext(PointsContext);
 
     const buttonPlayAgain = () => {
-        window.location.href="http://localhost:3000"
+        window.location.href="http://belluzzo-rock-paper-scissors-peach.vercel.app"
     }
 
     const buttonDev = () => {
