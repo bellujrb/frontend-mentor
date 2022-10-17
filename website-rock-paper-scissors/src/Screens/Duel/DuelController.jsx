@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { PointsContext } from '../../Global/PointsContext';
+import { GamerContext } from '../../Global/GamerContext';
 import DualView from './DuelView';
 
 const DuelController = () => {
 
-    const context = useContext(PointsContext);
+    const context = useContext(GamerContext);
 
     const buttonPlayAgain = () => {
         window.location.href="http://localhost:3000"

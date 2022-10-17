@@ -1,16 +1,18 @@
 import React, { useContext, useState, useEffect } from 'react'
 import HomeView from './HomeView'
-import { GamerContext } from '../../Global/PointsContext'
+import { GamerContext } from '../../Global/GamerContext'
 
 const HomeController = () => {
 
     const context = useContext(GamerContext);
 
+    const values = ["Scissors", "Paper", "Rock"]
+
     useEffect(() => {
-        if (player1 && (player2 === "Scissors" || player2 === "Paper")){
+        if (context?.player1 && (context?.player2 === "Scissors" || context?.player2 === "Paper")){
             window.location.href="/duel"
         }
-    }, [player1, player2])
+    }, [context?.player1, context?.player2])
 
     const buttonDev = () => {
         alert("System in development")
@@ -18,26 +20,26 @@ const HomeController = () => {
 
     const buttonPlaying1 = () =>{
 
-        if (player1 === ""){
-            setPlayer1("none")
+        if (context?.player1 === ""){
+            context?.setPlayer1("none")
             alert("Player 1 SELECTED");
         }
 
-        if (player1 === "Scissors" || player1 === "Paper" || player1 === "Rock"){
+        if (values.includes(context?.player1)) {
             alert("Player 1 has already made his choice");
         }
     }
 
     const buttonPlaying2 = () => {
 
-        if (player2 === "" && (player1 === "Paper" || player1 === "Scissors" || player1 === "Rock")){
-            setPlayer2("none2")
+        if (context?.player2 === "" && (values.includes(context?.player2))){
+            context?.setPlayer2("none2")
             alert("Player 2 SELECTED");
         } else {
             alert("Player 1 has not chosen yet")
         }
 
-        if (player2 === "Scissors" || player2 === "Paper" || player2 === "Rock"){
+        if (context?.player2 === values.includes(context?.player2)){
             alert("Player 2 has already made his choice");
         }
     }
@@ -45,22 +47,22 @@ const HomeController = () => {
     const buttonPaper = () => {
 
         //Player 1 //
-        if (player1 === "none"){
-            setPlayer1("Paper");
+        if (context?.player1 === "none"){
+            context?.setPlayer1("Paper");
             alert("SELECTED PAPER");
         } 
 
-        if (player1 === "Paper") {
+        if (context?.player1 === "Paper") {
             alert("You've already made your choice");
         }
 
         // Player 2
-        if (player2 === "none2"){
-            setPlayer2("Paper");
+        if (context?.player2 === "none2"){
+            context?.setPlayer2("Paper");
             alert("SELECTED PAPER");
         } 
 
-        if (player2 === "Paper") {
+        if (context?.player2 === "Paper") {
             alert("You've already made your choice");
         }
     }
@@ -68,21 +70,21 @@ const HomeController = () => {
     const buttonScissors = () => {
 
         // Player 1 //
-        if (player1 === "none"){
-            setPlayer1("Scissors");
+        if (context?.player1 === "none"){
+            context?.setPlayer1("Scissors");
             alert("SELECTED SCISSORS")
         } 
 
-        if (player1 ==="Scissors") {
+        if (context?.player1 ==="Scissors") {
             alert("You've already made your choice")
         }
 
         // Player 2 //
-        if (player2 === "none2"){
-            setPlayer2("Scissors");
+        if (context?.player2 === "none2"){
+            context?.setPlayer2("Scissors");
         } 
         
-        if (player2 ==="Scissors") {
+        if (context?.player2 ==="Scissors") {
             alert("You've already made your choice")
         }
     }
@@ -90,30 +92,31 @@ const HomeController = () => {
     const buttonRock = () => {
 
         // Player 1 //
-        if (player1 === "none"){
-            setPlayer1("Rock");
+        if (context?.player1 === "none"){
+            context?.setPlayer1("Rock");
             alert("SELECTED ROCK")
         } 
 
-        if (player1 ==="Rock") {
+        if (context?.player1 ==="Rock") {
             alert("You've already made your choice")
         }
 
         // Player 2 //
-        if (player2 === "none2"){
-            setPlayer2("Rock");
+        if (context?.player2 === "none2"){
+            context?.setPlayer2("Rock");
         } 
         
-        if (player2 ==="Rock") {
+        if (context?.player2 ==="Rock") {
             alert("You've already made your choice")
         }
     }
 
     return (
         <HomeView
-        points={context.points}
-        player1={context.player1}
-        player2={context.player2}
+        points={context?.points}
+        player1={context?.player1}
+        player2={context?.player2}
+        values={values}
 
         buttonDev={buttonDev}
         buttonPaper={buttonPaper}
