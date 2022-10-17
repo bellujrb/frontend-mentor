@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { PointsContext } from '../../Global/PointsContext';
-import DualView from '../Duel/DuelView';
+import DualView from './DuelView';
 
 const DuelController = () => {
 
