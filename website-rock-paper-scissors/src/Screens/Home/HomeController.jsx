@@ -1,13 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react'
 import HomeView from './HomeView'
-import { PointsContext } from '../../Global/PointsContext'
+import { GamerContext } from '../../Global/PointsContext'
 
 const HomeController = () => {
 
-    const context = useContext(PointsContext);
-
-    const [player1, setPlayer1] = useState("");
-    const [player2, setPlayer2] = useState("");
+    const context = useContext(GamerContext);
 
     useEffect(() => {
         if (player1 && (player2 === "Scissors" || player2 === "Paper")){
@@ -115,6 +112,8 @@ const HomeController = () => {
     return (
         <HomeView
         points={context.points}
+        player1={context.player1}
+        player2={context.player2}
 
         buttonDev={buttonDev}
         buttonPaper={buttonPaper}
