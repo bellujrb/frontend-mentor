@@ -7,5 +7,5 @@
   <p align="center"> Desktop Demonstration </p>
   https://website-bankeasy-belluzzojr.vercel.app
 <div align="center">
-  <p> This project is made up of HTML,CSS, JS and React </p>
+  <p> This project is made up of HTML,CSS, and JS</p>
 </div>
