@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { createContext } from 'react';
 
 export const GamerContext = createContext();
@@ -9,6 +10,7 @@ export const GamerContextProvider = (props) => {
 
     const [player1, setPlayer1] = useState("");
     const [player2, setPlayer2] = useState("");
+
 
     return (
         <GamerContext.Provider

@@ -6,7 +6,21 @@ import play2 from '../../Images/play2.png'
 import play3 from '../../Images/play3.png'
 
 
-export default function HomeView ( {buttonPlayAgain, points} ){
+export default function HomeView ( {buttonPlayAgain, points, player1} ){
+
+    const getImageSrc = () => {
+        let src;
+
+        if(player1 === "Paper"){
+            src=play1
+        } else if (player1 === "Scissors"){
+            src=play2
+        } else if (player1 === "Rock"){
+            src=play3
+        }
+
+        return src;
+    }
 
     return (
         <div className='home'>
@@ -23,7 +37,7 @@ export default function HomeView ( {buttonPlayAgain, points} ){
         
             <div className='picked1'>
                 <h2>YOU PICKED</h2>
-                <img src={play1}/>
+                <img src={getImageSrc()}/>
             </div>
 
             <div className='results'>
