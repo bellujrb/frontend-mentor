@@ -1,21 +1,40 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Duel.css'
 import logo from '../../Images/logo.svg'
 import play1 from '../../Images/play1.png'
 import play2 from '../../Images/play2.png'
 import play3 from '../../Images/play3.png'
+import { GamerContext } from '../../Global/GamerContext'
 
 
-export default function HomeView ( {buttonPlayAgain, points, player1} ){
+export default function DuelView ( {buttonPlayAgain, points} ){
+
+    const context = useContext(GamerContext);
 
     const getImageSrc = () => {
+
         let src;
 
-        if(player1 === "Paper"){
+        if(context.player1 === "Paper"){
             src=play1
-        } else if (player1 === "Scissors"){
+        } else if (context.player1 === "Scissors"){
             src=play2
-        } else if (player1 === "Rock"){
+        } else if (context.player1 === "Rock"){
+            src=play3
+        }
+
+        return src;
+    }
+
+    const getImageSrc2 = () => {
+
+        let src;
+
+        if(context.player2 === "Paper"){
+            src=play1
+        } else if (context.player2 === "Scissors"){
+            src=play2
+        } else if (context.player2 === "Rock"){
             src=play3
         }
 
@@ -47,7 +66,7 @@ export default function HomeView ( {buttonPlayAgain, points, player1} ){
 
             <div className='picked1'>
                 <h2>THE HOUSE PICKED</h2>
-                <img src={play2}/>
+                <img src={getImageSrc2()}/>
             </div>
         </div>
 

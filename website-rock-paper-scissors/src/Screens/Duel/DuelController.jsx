@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { GamerContext } from '../../Global/GamerContext';
-import DualView from './DuelView';
+import DuelView from './DuelView';
+import { GamerContext } from '../../Global/GamerContext'
 
 const DuelController = () => {
 
     const context = useContext(GamerContext);
 
     const buttonPlayAgain = () => {
-        window.location.href="http://localhost:3000"
+        window.location.pathname = "/"
     }
 
     const buttonDev = () => {
@@ -15,7 +15,7 @@ const DuelController = () => {
     }
 
     return (
-        <DualView
+        <DuelView
         points={context.points}
         buttonDev={buttonDev}
         buttonPlayAgain={buttonPlayAgain}
