@@ -7,7 +7,7 @@ import play2 from '../../Images/play2.png'
 import play3 from '../../Images/play3.png'
 
 
-export default function HomeView ( {buttonDev, points, buttonPaper,
+export default function HomeView ( {points, buttonDev, buttonPaper,
     buttonScissors, buttonRock, buttonPlaying1, buttonPlaying2} ){
 
     return (
